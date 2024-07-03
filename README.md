@@ -2,19 +2,18 @@
 Custom wordpress theme for educational purposes.
 
 # Tools
-This app was built using PhpStorm.
+This theme was built using PhpStorm and PHP 7.3 as a programming language.
 
 # Version
-The app will run on wordpress version 5.9.10
+The theme will run on WordPress version 5.9.10
 
 # Installation
-* Clone the repository to your local machine using
+* Clone the repository to your local machine using 
 ```
-git clone 
+git clone https://github.com/annadoerr/milouwings-WP-Theme.git
 ```
-* Open the project folder with Android Studio
-* Connect your device to your computer or use an emulator
-* Hit build 
-* You should now be able to use the app. 
+* Connect PhpStorm to your WordPress website by entering the FTP data
+* Create a new folder under WP-Content>Themes and insert cloned theme files
+* Select the new theme in WordPress
 
 
