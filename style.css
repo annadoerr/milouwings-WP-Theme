@@ -1,0 +1,712 @@
+/*
+Theme Name: milouwings
+Author: Anna Doerr
+Description: Custom wordpress theme for educational purposes
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: milouwings
+*/
+
+/*Allgemein*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    background-color: #FFDBDB;
+}
+
+/**/
+
+/*Schriften einbinden*/
+@font-face {
+    font-family: "Didact";
+    src: url(/wp-content/themes/milouwings/fonts/didactttf.ttf) format('truetype');
+    src: url(/wp-content/themes/milouwings/fonts/didactwoff.woff) format('woff');
+    src: url(/wp-content/themes/milouwings/fonts/didactgothic.otf) format('opentype');
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url(/wp-content/themes/milouwings/fonts/notosans.ttf) format('truetype');
+    src: url(/wp-content/themes/milouwings/fonts/notosanswoff.woff) format('woff')
+}
+/**/
+
+/*header*/
+header {
+    background-color: #ffffff;
+}
+
+.headerimg {
+    width: 100%;
+}
+
+.headerimg img {
+    width: 50%;
+    padding: 4% 25%;
+}
+
+@media only screen and (min-width: 45em) {
+    .headerimg img {
+        width: 50%;
+        padding: 2% 25%;
+    }
+
+}
+/**/
+
+/* nav-main */
+#menu {
+    font-family: "Didact", sans-serif;
+    font-size: 1em;
+    background-color: #F58282;
+    padding: 2% 0;
+}
+
+#menu .menu-open,
+#menu .menu-close {
+    color: #ffffff;
+    font-family: "Didact", sans-serif;
+    font-size: 2em;
+}
+
+.menu-close,
+.menu-open {
+    margin: 0 5%;
+    text-decoration: none;
+}
+
+.menu-hauptmenue-container {
+    padding: 5% 0;
+    background-color: #F58282;
+}
+.menu-hauptmenue-container ul {
+    padding: 0 6%;
+}
+
+.menu-hauptmenue-container > ul > li:nth-child(n+2) {
+    border-top: 0.05em solid #ffffff;
+}
+
+.menu-hauptmenue-container > ul > li:nth-child(n+4) {
+    border-bottom: 0.05em solid #ffffff;
+}
+
+.menu-hauptmenue-container ul li {
+    list-style-type: none;
+    padding: 0.5em 0;
+}
+
+.menu-hauptmenue-container ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu-close,
+.menu-hauptmenue-container {
+    display: none;
+}
+
+#menu:target .menu-open {
+    display: none;
+}
+
+#menu:target .menu-close,
+#menu:target .menu-hauptmenue-container {
+    display: block;
+}
+
+/*Nav Hover und Active Behavior*/
+.menu-hauptmenue-container ul li a:hover {
+    color: #000000;
+}
+
+[aria-current] {
+    color: #000000 !important;
+}
+@media only screen and (min-width: 45em) {
+    #menu {
+        font-size: 1.2em;
+        width: 96%;
+        padding: 0 2%;
+        background-color: #F58282;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .menu-hauptmenue-container {
+        display: block;
+        text-align: right;
+        background-color: #F58282;
+        padding: 0;
+    }
+
+    .menu-hauptmenue-container ul {
+        padding: 0;
+    }
+
+    .menu-hauptmenue-container ul li {
+        display: inline;
+        padding: 1% 2%;
+        border: none !important;
+    }
+
+    .menu-hauptmenue-container ul li a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    /*Dropdown*/
+    #menu-item-33 {
+        position: relative;
+        display: inline-block;
+    }
+
+    .sub-menu {
+        display: none;
+        position: absolute;
+        min-width: 100%;
+        background-color: #F58282;
+        text-align: left;
+    }
+
+    .sub-menu #menu-item-32 {
+        padding: 0 0 5% 0;
+        float: left;
+    }
+
+    .sub-menu #menu-item-42 {
+        float: left;
+        min-width: 100%;
+    }
+
+    #menu-item-33:hover .sub-menu {
+        display: block;
+        padding: 10%;
+        color: #ffffff;
+    }
+}
+/**/
+
+/*Bild unter Header auf Front-Page*/
+.background {
+    background-image: url("img/greece.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.opacity {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.opacity .gruss {
+    padding: 6%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.opacity .gruss p {
+    font-family: "Didact", sans-serif;
+    font-size: 1em;
+    padding: 0 2% 5% 2%;
+}
+
+.gruss a {
+    color: #ffffff;
+    font-family: "Didact", sans-serif;
+    font-size: 1em;
+    border: 0.08em solid #ffffff;
+    padding: 3%;
+    margin: 5%;
+    text-decoration: none;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
+
+.gruss a:hover {
+    color: #000000;
+    border-color: #ffffff;
+    background-color: #ffffff;
+}
+@media only screen and (min-width: 45em) {
+    .opacity .gruss {
+        padding: 12% 2%;
+    }
+
+    .opacity .gruss p {
+        font-size: 2em;
+        padding: 0 2% 4% 2%;
+    }
+
+    .gruss a {
+        font-size: 1.2em;
+        padding: 1%;
+    }
+}
+/**/
+
+/*Sidebar*/
+.kreis {
+    width: 75%;
+    padding: 15% 0 6% 20%;
+}
+
+.rund {
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    padding: 2%;
+}
+
+.kreis img {
+    background-color: #ffffff;
+    width: 75%;
+}
+
+@media only screen and (min-width: 45em) {
+    .kreis {
+        width: 26%;
+        float: left;
+        padding: 5% 2%;
+    }
+}
+/**/
+
+/*main*/
+main {
+    width: 100%;
+}
+main .inhalt {
+    margin: 10% 0;
+}
+
+main .inhalt p {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1em;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5%;
+    margin: 10% 0;
+}
+
+main .inhalt ul,
+main .inhalt ol {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1em;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10%;
+    margin: 10% 0;
+}
+
+.inhalt h1,
+.inhalt h2 {
+    clear: both;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.5em;
+    padding: 2% 5%;
+    margin:  10% 0;
+}
+@media only screen and (min-width: 45em) {
+    main {
+        width: 70%;
+        float: left
+    }
+
+    main .inhalt {
+        margin: 10% 10% 10% 0;
+    }
+
+    main .inhalt p {
+        font-size: 1.2em;
+        clear: both;
+        margin: 5% 0;
+        border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em;
+    }
+
+    main .inhalt ul,
+    main .inhalt ol {
+        font-size: 1.2em;
+        margin: 5% 0;
+        padding: 5% 8%;
+        border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em;
+    }
+
+    .inhalt h1,
+    .inhalt h2 {
+        padding: 2%;
+        margin: 5% 0;
+        border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+    }
+}
+
+/*Slideshow Front-Page*/
+    .dia {
+        margin: 10% 0;
+    }
+
+    @media only screen and (min-width: 45em) {
+        .dia {
+            margin: 5% 0;
+        }
+    }
+/**/
+
+/*News Front-Page*/
+.news .post {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10% 5%;
+    margin: 0 0 10% 0;
+}
+
+.news h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+}
+
+.post .posttext p {
+    padding: 0;
+}
+
+.post .postimg {
+    margin: 0 0 10% 0;
+}
+
+.post .postimg img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.postimg img {
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em
+}
+
+.post .impost img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.news a {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: #F58282;
+    color: #ffffff;
+    padding: 4%;
+    width: 32%;
+    text-align: center;
+    border-radius: 0.2em;
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+}
+
+.news a:hover {
+    background-color: #F58282;
+    color: #000000;
+}
+
+.date {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1em;
+    color: #000000;
+    margin: 2% 0 0 0;
+}
+
+@media only screen and (min-width: 45em) {
+    .news .post{
+        padding: 5%;
+        margin: 0 15% 5% 15%;
+        border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em
+    }
+
+    .news h2 {
+        font-size: 3em;
+    }
+
+
+    .news a {
+        font-size: 1.2em;
+        display: inline;
+        width: auto;
+        padding: 2%;
+    }
+
+    .post .impost {
+        margin: 0 0 5% 0;
+    }
+
+    .post .postimg {
+        margin: 0 0 5% 0;
+    }
+
+    .post .postimg img {
+        display: block;
+    }
+
+    .post .impost img {
+        display: block;
+    }
+
+    .impost img {
+        border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em
+    }
+}
+
+/**/
+
+/*Spenden*/
+.zahler {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.zahler #tf-stat-397 {
+    margin: 0 0 10% 0;
+    padding: 0;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.statistics .stat {
+    margin: 0;
+}
+
+.knopf {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1em;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 5% 0;
+}
+
+@media only screen and (min-width: 45em) {
+    .zahler {
+        font-size: 2em;
+        width: 50%;
+        float: left;
+    }
+
+    .inhalt .zahler #tf-stat-397 {
+        margin: 0 5% 10% 0;
+        border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em
+    }
+
+    .knopf {
+        font-size: 1.2em;
+        width: 50%;
+        float: left;
+        padding: 2.5% 0;
+        margin: 0 0 5% 0;
+        border-radius: 1em;
+        -webkit-border-radius: 1em;
+        -moz-border-radius: 1em
+    }
+}
+/**/
+
+/*Bilder Vorstand*/
+.vorstand {
+    width: 50%;
+    float: left;
+    margin: 0 0 10% 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.vorstand img  {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.vorstand .aligncenter {
+    text-align: center;
+}
+
+.vorstand .aligncenter figure {
+    background-color: #F58282;
+    padding: 5%;
+}
+
+.vorstand .aligncenter figcaption {
+    background-color: #F58282;
+    color: #ffffff;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5%;
+}
+@media only screen and (min-width: 45em) {
+    .vorstand {
+        width: 25%;
+    }
+
+    .clear {
+        clear: none;
+    }
+
+    .vorstand .aligncenter figure {
+        margin: 0 5%;
+    }
+
+    .vorstand .aligncenter figcaption {
+        font-size: 1.2em;
+        background-color: #F58282;
+        margin: 0 5%;
+    }
+}
+/**/
+
+/*Bilder neben Text*/
+.float-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.float-img figcaption {
+    font-family: "Didact", sans-serif;
+    font-size: 0.8em;
+    padding: 0 5%;
+}
+@media only screen and (min-width: 45em) {
+    .inhalt .float-text p {
+        margin: 0 0 10% 0;
+    }
+
+    .inhalt .float-text ol {
+        margin: 0 0 10% 0;
+    }
+
+    .float-img {
+        width: 40%;
+        float: left;
+        margin: 0 5% 5% 5%;
+    }
+
+    .float-text {
+        clear: both;
+        width:50%;
+        float: left;
+    }
+
+    .float-img figcaption {
+        font-size: 1em;
+        padding: 0;
+    }
+
+    .float-img img {
+        border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em;
+    }
+}
+/**/
+
+/*Video*/
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/**/
+/*footer*/
+footer {
+    clear: both;
+    width: 96%;
+    padding: 2%;
+    background-color: #F58282;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+footer a {
+    font-family: "Didact", sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #000000;
+}
+
+.copyright {
+    padding: 4%;
+    color: #ffffff;
+    font-family: "Didact", sans-serif;
+    font-size: 0.8em;
+}
+
+.footer-links {
+    padding: 4%;
+}
+
+@media only screen and (min-width: 45em) {
+    footer a {
+        font-size: 1.2em;
+        width: 31%;
+        float: left;
+    }
+
+    .footer-links {
+        text-align: center;
+        width: 80%;
+        padding: 0 10% 4% 10%;
+    }
+
+    #menu-fussmatte #menu-item-11 a {
+        margin: 0 2%;
+        border-right: 0.1em solid #ffffff;
+        border-left: 0.1em solid #ffffff;
+    }
+
+    .copyright {
+        font-size: 1em;
+        clear: both;
+        padding: 0;
+        text-align: center;
+        border-top: none;
+    }
+}
+/**/
